@@ -14,12 +14,11 @@ Arithmetic operators are used with numeric values to perform common mathematical
 PEMDAS is an acronym used to remember the order of operations in mathematics: Parentheses, Exponents, Multiplication & Division (left-to-right), and Addition & Subtraction (left-to-right)
 """
 
-print(3 + 2)
-print(5 + 6.0)
-print(10 - 6)
-print(5 * 6)
-print(5 * 6.0)
-print(4 / 5)
-print(10 / 5)
+print(10 % 3)
+print(47 % 6)
 
-print((5 + 6) / 2)
+print(2**3)
+print(100**0.5)
+
+print(5 // 2)
+print(6 // 2)
