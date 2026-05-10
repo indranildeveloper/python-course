@@ -1,24 +1,18 @@
 """
-Python Arithmetic Operators
+Comments in Python
 
-Arithmetic operators are used with numeric values to perform common mathematical operations:
-
-+	Addition
--	Subtraction
-*	Multiplication
-/	Division
-%	Modulus
-**	Exponentiation
-//	Floor division
-
-PEMDAS is an acronym used to remember the order of operations in mathematics: Parentheses, Exponents, Multiplication & Division (left-to-right), and Addition & Subtraction (left-to-right)
+- Comments can be used to explain Python code.
+- Comments can be used to make the code more readable.
+- Comments can be used to prevent execution when testing code.
 """
 
-print(10 % 3)
-print(47 % 6)
+# This is a comment
+# print(8 / 2)  # this division will return a float
 
-print(2**3)
-print(100**0.5)
-
-print(5 // 2)
-print(6 // 2)
+"""
+this 
+is  
+a 
+multiline
+comment
+"""
