@@ -1,18 +1,10 @@
-"""
-In programming, data type is an important concept.
+print(40)
+print(5.67)
+print(3 + 5j)
 
-In Python, primitive data types are the basic building blocks used to store simple values.
+print(type(40))
+print(type(5.67))
+print(type(3 + 5j))
 
-Variables can store data of different types, and different types can do different things.
-
-Python has the following data types built-in by default, in these categories:
-
-Text Type:	str
-Numeric Types:	int, float, complex
-Sequence Types:	list, tuple, range
-Mapping Type:	dict
-Set Types:	set, frozenset
-Boolean Type:	bool
-Binary Types:	bytes, bytearray, memoryview
-None Type:	NoneType
-"""
+print(10 + 12)
+print(4 + 5.0)
