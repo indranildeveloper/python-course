@@ -1,18 +1,42 @@
 """
-Comments in Python
+Variables in Python
 
-- Comments can be used to explain Python code.
-- Comments can be used to make the code more readable.
-- Comments can be used to prevent execution when testing code.
+Variables
+Variables are containers for storing data values.
+
+In Python, variables are symbolic names that act as containers or labels for storing data values in your computer's memory.
+
+Creating Variables
+Python has no command for declaring a variable.
+
+A variable is created the moment you first assign a value to it.
+
+Variable names are case-sensitive.
 """
 
-# This is a comment
-# print(8 / 2)  # this division will return a float
+my_age = 20
 
-"""
-this 
-is  
-a 
-multiline
-comment
-"""
+# print(my_age * 5)
+
+# x = 10
+# y = 20
+
+x, y, z = 10, 20, 30
+
+# print(x * y * z)
+
+a = 5
+A = 10
+
+# print(a)
+# print(A)
+
+# i = 10
+# j = 10
+# k = 10
+
+i = j = k = 10
+
+print(i)
+print(j)
+print(k)
