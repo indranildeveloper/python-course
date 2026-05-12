@@ -1,42 +1,14 @@
 """
-Variables in Python
+Python - Variable Names
 
-Variables
-Variables are containers for storing data values.
+Variable Names
+A variable can have a short name (like x and y) or a more descriptive name (age, car_name, total_volume).
 
-In Python, variables are symbolic names that act as containers or labels for storing data values in your computer's memory.
+Rules for Python variable names:
 
-Creating Variables
-Python has no command for declaring a variable.
-
-A variable is created the moment you first assign a value to it.
-
-Variable names are case-sensitive.
+- A variable name must start with a letter or the underscore character
+- A variable name cannot start with a number
+- A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+- Variable names are case-sensitive (age, Age and AGE are three different variables)
+- A variable name cannot be any of the Python keywords.
 """
-
-my_age = 20
-
-# print(my_age * 5)
-
-# x = 10
-# y = 20
-
-x, y, z = 10, 20, 30
-
-# print(x * y * z)
-
-a = 5
-A = 10
-
-# print(a)
-# print(A)
-
-# i = 10
-# j = 10
-# k = 10
-
-i = j = k = 10
-
-print(i)
-print(j)
-print(k)
