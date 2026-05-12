@@ -1,24 +1,22 @@
 """
-Strings in Python
+String Escape Characters
 
-In Python, a string is an immutable sequence of Unicode characters used to represent text data. Because they are immutable, any operation that seems to "change" a string actually creates a brand new string object in memory.
+Escape Character
+To insert characters that are illegal in a string, use an escape character.
 
-Strings in python are surrounded by either single quotation marks, or double quotation marks.
+An escape character is a backslash \\ followed by the character you want to insert.
 
-'hello world' is the same as "hello world".
+An example of an illegal character is a double quote inside a string that is surrounded by double quotes:
+
+\'	Single Quote
+\"	Double Quote
+\\	Backslash
+\n	New Line
+\r	Carriage Return
+\t	Tab
+\b	Backspace
+\f	Form Feed
 """
 
-my_name = "Indra"
-msg = "he said, 'hi there'"
-
-multiline_message = """This
-is 
-a
-multiline 
-string!
-"""
-
+msg = "hello\tworld"
 print(msg)
-print(my_name)
-print(multiline_message)
-print(type(my_name))
