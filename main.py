@@ -1,12 +1,24 @@
 """
-Python None Keyword
+Strings in Python
 
-Definition and Usage
-The None keyword is used to define a null value, or no value at all.
+In Python, a string is an immutable sequence of Unicode characters used to represent text data. Because they are immutable, any operation that seems to "change" a string actually creates a brand new string object in memory.
 
-None is not the same as 0, False, or an empty string. None is a data type of its own (NoneType) and only None can be None.
+Strings in python are surrounded by either single quotation marks, or double quotation marks.
+
+'hello world' is the same as "hello world".
 """
 
-my_pet = None
-print(my_pet)
-print(type(my_pet))
+my_name = "Indra"
+msg = "he said, 'hi there'"
+
+multiline_message = """This
+is 
+a
+multiline 
+string!
+"""
+
+print(msg)
+print(my_name)
+print(multiline_message)
+print(type(my_name))
