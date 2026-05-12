@@ -1,14 +1,12 @@
 """
-Python - Variable Names
+Python None Keyword
 
-Variable Names
-A variable can have a short name (like x and y) or a more descriptive name (age, car_name, total_volume).
+Definition and Usage
+The None keyword is used to define a null value, or no value at all.
 
-Rules for Python variable names:
-
-- A variable name must start with a letter or the underscore character
-- A variable name cannot start with a number
-- A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
-- Variable names are case-sensitive (age, Age and AGE are three different variables)
-- A variable name cannot be any of the Python keywords.
+None is not the same as 0, False, or an empty string. None is a data type of its own (NoneType) and only None can be None.
 """
+
+my_pet = None
+print(my_pet)
+print(type(my_pet))
