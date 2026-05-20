@@ -1,13 +1,11 @@
 """
-Python Type Conversion
+Milage Converter
 """
 
-num_one = 10
-num_two = float(num_one)
-print(num_two)
-print(type(num_two))
+print("How many kms you have walked today?")
+kms = input()
 
-price = 10
+miles = float(kms) * 0.621371
+miles = round(miles, 2)
 
-msg = "The price is " + str(price)
-print(msg)
+print(f"You entered {kms} km which is equal to {miles} mile.")
