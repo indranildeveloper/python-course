@@ -1,12 +1,10 @@
 """
-Python String Formatting
+Python String Index
 
-F-String was introduced in Python 3.6, and is now the preferred way of formatting strings.
-Before Python 3.6 we had to use the format() method.
+Like many other popular programming languages, strings in Python are arrays of unicode characters.
+
+Square brackets can be used to access elements of the string.
 """
 
-price = 20
-tax = 0.25
-# msg = "The price is " + str(price) + " dollars"
-msg = f"The total price is {(price + (price * tax)):.2f} dollars"
-print(msg)
+msg = "Hello World"
+print(len(msg))
