@@ -1,22 +1,12 @@
 """
-Python - String Concatenation
+Python String Formatting
 
-String Concatenation / Join Strings
-To concatenate, or combine, two strings you can use the + operator.
+F-String was introduced in Python 3.6, and is now the preferred way of formatting strings.
+Before Python 3.6 we had to use the format() method.
 """
 
-str_one = "Hello"
-str_two = "World"
-msg = str_one + " " + str_two
-
+price = 20
+tax = 0.25
+# msg = "The price is " + str(price) + " dollars"
+msg = f"The total price is {(price + (price * tax)):.2f} dollars"
 print(msg)
-
-ice_str = "ice "
-# cream_str = "cream"
-ice_str += "cream"
-
-print(ice_str)
-
-a = 20
-a -= 50
-print(a)
