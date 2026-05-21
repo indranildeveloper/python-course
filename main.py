@@ -1,41 +1,54 @@
 """
-Python If Statement
+Truthy and Falsy Values
 
-Python Conditions and If statements
+In Python, every object has an inherent "truthiness" value when evaluated in a boolean context, such as an if statement or a while loop. While there are specific "falsy" values that resolve to False, almost everything else in Python is considered "truthy" and resolves to True.
 
-Python supports the usual logical conditions from mathematics:
+Falsy Values
 
-    Equals: a == b
-    Not Equals: a != b
-    Less than: a < b
-    Less than or equal to: a <= b
-    Greater than: a > b
-    Greater than or equal to: a >= b
+Values are considered falsy if they represent "nothing" or are explicitly defined as false. The standard falsy values in Python include:
 
-These conditions can be used in several ways, most commonly in "if statements" and loops.
+- Constants: None and False.
 
-An "if statement" is written by using the if keyword.
+- Numeric Zeroes: 0 (integer), 0.0 (float), 0j (complex), and other numeric variations of zero.
 
-The Elif Keyword
+- Empty Sequences and Collections:
 
-The elif keyword is Python's way of saying "if the previous conditions were not true, then try this condition".
+- Empty string: "" or ''.
+- Empty list: [].
+- Empty tuple: ().
+- Empty dictionary: {}.
+- Empty set: set().
 
-The elif keyword allows you to check multiple expressions for True and execute a block of code as soon as one of the conditions evaluates to True.
+- Custom Objects: Any object where the class defines a __bool__() method that returns False or a __len__() method that returns 0
 
-The Else Keyword
+Truthy Values
 
-The else keyword catches anything which isn't caught by the preceding conditions.
+Values are considered truthy if they are not falsy. Common examples include:
 
-The else statement is executed when the if condition (and any elif conditions) evaluate to False.
+- Non-zero numbers: Any positive or negative number like 1, -42, or 3.14.
+
+- Non-empty strings: Even a string with just a space " " is truthy.
+
+- Non-empty collections: Any list, tuple, or dictionary that contains at least one item, such as [0], {"key": "value"}, or (False,).
+
+- Functions and Classes: All functions and user-defined class instances (unless specifically overridden) are truthy.
 """
 
-marks = 50
+# num = 0
 
-if marks >= 90:
-    print("Grade: A")
-elif marks >= 80:
-    print("Grade: B")
-elif marks >= 70:
-    print("Grade: C")
+# if num:
+#     print(f"Your number is {num}")
+# else:
+#     print("Your number represents false.")
+
+# print(bool(0))
+# print(bool(5))
+# print(bool("hello"))
+# print(bool(""))
+
+num = input("Hey, enter a number: ")
+
+if num:
+    print(f"You entered the number: {num}")
 else:
-    print("Grade: D")
+    print("Hey, you did not enter a number.")
