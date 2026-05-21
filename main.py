@@ -21,9 +21,15 @@ The Elif Keyword
 The elif keyword is Python's way of saying "if the previous conditions were not true, then try this condition".
 
 The elif keyword allows you to check multiple expressions for True and execute a block of code as soon as one of the conditions evaluates to True.
+
+The Else Keyword
+
+The else keyword catches anything which isn't caught by the preceding conditions.
+
+The else statement is executed when the if condition (and any elif conditions) evaluate to False.
 """
 
-marks = 75
+marks = 50
 
 if marks >= 90:
     print("Grade: A")
@@ -31,3 +37,5 @@ elif marks >= 80:
     print("Grade: B")
 elif marks >= 70:
     print("Grade: C")
+else:
+    print("Grade: D")
