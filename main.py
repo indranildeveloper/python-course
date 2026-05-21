@@ -1,21 +1,24 @@
 """
-Python Booleans
+Python If Statement
 
-Booleans represent one of two values: True or False.
+Python Conditions and If statements
 
-In programming you often need to know if an expression is True or False.
+Python supports the usual logical conditions from mathematics:
 
-You can evaluate any expression in Python, and get one of two answers, True or False.
+    Equals: a == b
+    Not Equals: a != b
+    Less than: a < b
+    Less than or equal to: a <= b
+    Greater than: a > b
+    Greater than or equal to: a >= b
 
-When you compare two values, the expression is evaluated and Python returns the Boolean answer.
+These conditions can be used in several ways, most commonly in "if statements" and loops.
+
+An "if statement" is written by using the if keyword.
 """
 
-# print(10 > 8)
-# print(10 < 8)
-# print(10 == 10)
-# print(8 != 8)
+a = 60
+b = 50
 
-a = 5
-b = 6
-
-print(a < b)
+if a > b:
+    print("a is grater than b")
