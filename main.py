@@ -1,10 +1,21 @@
 """
-Python input() Function
+Python Booleans
+
+Booleans represent one of two values: True or False.
+
+In programming you often need to know if an expression is True or False.
+
+You can evaluate any expression in Python, and get one of two answers, True or False.
+
+When you compare two values, the expression is evaluated and Python returns the Boolean answer.
 """
 
-print("What is your name?")
-name = input()
-print("What is your age?")
-age = input()
+# print(10 > 8)
+# print(10 < 8)
+# print(10 == 10)
+# print(8 != 8)
 
-print(f"Hello {name}, you are {age}.")
+a = 5
+b = 6
+
+print(a < b)
