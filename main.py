@@ -1,19 +1,14 @@
 """
 Python Logical Operators
 
-Logical operators are used to combine conditional statements. Python has three logical operators:
+Combining Multiple Operators
 
-    and - Returns True if both statements are true
-    or - Returns True if one of the statements is true
-    not - Reverses the result, returns False if the result is true
+You can combine multiple logical operators in a single expression. Python evaluates not first, then and, then or.
 """
 
-a = 200
-b = 40
-c = 500
+age = 25
+is_student = False
+has_discount_code = True
 
-if a > b and c > a:
-    print("Conditions are true.")
-
-if a > b or a > c:
-    print("Here at least one condition is true.")
+if (age < 18 or age > 65) and not is_student or has_discount_code:
+    print("Discount Applied!")
