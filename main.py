@@ -8,12 +8,10 @@ Logical operators are used to combine conditional statements. Python has three l
     not - Reverses the result, returns False if the result is true
 """
 
-a = 200
-b = 40
-c = 500
+a = 40
+b = 100
 
-if a > b and c > a:
-    print("Conditions are true.")
-
-if a > b or a > c:
-    print("Here at least one condition is true.")
+if not a > b:
+    print("a is not grater than b.")
+else:
+    print("a is not less than b.")
