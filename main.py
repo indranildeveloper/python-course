@@ -1,54 +1,19 @@
 """
-Truthy and Falsy Values
+Python Logical Operators
 
-In Python, every object has an inherent "truthiness" value when evaluated in a boolean context, such as an if statement or a while loop. While there are specific "falsy" values that resolve to False, almost everything else in Python is considered "truthy" and resolves to True.
+Logical operators are used to combine conditional statements. Python has three logical operators:
 
-Falsy Values
-
-Values are considered falsy if they represent "nothing" or are explicitly defined as false. The standard falsy values in Python include:
-
-- Constants: None and False.
-
-- Numeric Zeroes: 0 (integer), 0.0 (float), 0j (complex), and other numeric variations of zero.
-
-- Empty Sequences and Collections:
-
-- Empty string: "" or ''.
-- Empty list: [].
-- Empty tuple: ().
-- Empty dictionary: {}.
-- Empty set: set().
-
-- Custom Objects: Any object where the class defines a __bool__() method that returns False or a __len__() method that returns 0
-
-Truthy Values
-
-Values are considered truthy if they are not falsy. Common examples include:
-
-- Non-zero numbers: Any positive or negative number like 1, -42, or 3.14.
-
-- Non-empty strings: Even a string with just a space " " is truthy.
-
-- Non-empty collections: Any list, tuple, or dictionary that contains at least one item, such as [0], {"key": "value"}, or (False,).
-
-- Functions and Classes: All functions and user-defined class instances (unless specifically overridden) are truthy.
+    and - Returns True if both statements are true
+    or - Returns True if one of the statements is true
+    not - Reverses the result, returns False if the result is true
 """
 
-# num = 0
+a = 200
+b = 40
+c = 500
 
-# if num:
-#     print(f"Your number is {num}")
-# else:
-#     print("Your number represents false.")
+if a > b and c > a:
+    print("Conditions are true.")
 
-# print(bool(0))
-# print(bool(5))
-# print(bool("hello"))
-# print(bool(""))
-
-num = input("Hey, enter a number: ")
-
-if num:
-    print(f"You entered the number: {num}")
-else:
-    print("Hey, you did not enter a number.")
+if a > b or a > c:
+    print("Here at least one condition is true.")
