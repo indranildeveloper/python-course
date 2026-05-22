@@ -1,14 +1,11 @@
 """
-Python Logical Operators
+Python is vs ==
 
-Combining Multiple Operators
-
-You can combine multiple logical operators in a single expression. Python evaluates not first, then and, then or.
+In Python, the primary difference is that == compares values, while is compares identities (memory locations).
 """
 
-age = 25
-is_student = False
-has_discount_code = True
+a = [1, 2]
+b = [1, 2]
 
-if (age < 18 or age > 65) and not is_student or has_discount_code:
-    print("Discount Applied!")
+print(a == b)
+print(a is b)
