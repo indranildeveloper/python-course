@@ -1,38 +1,19 @@
 """
-Python Match
+Python For Loops
 
-The match statement is used to perform different actions based on different conditions.
+A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
 
-The Python Match Statement
+This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
 
-Instead of writing many if..else statements, you can use the match statement.
+With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
 
-The match statement selects one of many code blocks to be executed.
+The for loop does not require an indexing variable to set beforehand.
 """
 
-day = 6
+fruit = "apple"
 
-match day:
-    case 1:
-        print("Sunday")
-    case 2:
-        print("Monday")
-    case 3:
-        print("Tuesday")
-    case 4:
-        print("Wednesday")
-    case 5:
-        print("Thursday")
-    case 6:
-        print("Friday")
-    case 7:
-        print("Saturday")
-    # Default case
-    case _:
-        print("Hey, this is not a valid day.")
+for character in fruit:
+    print(character)
 
-match day:
-    case 2 | 3 | 4 | 5:
-        print("This is a week day.")
-    case 1 | 6 | 7:
-        print("Hey, I love weekends!")
+for number in range(1, 11):
+    print(number)
