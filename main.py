@@ -1,16 +1,34 @@
 """
-The while Loop in Python
+Python break and continue keywords to control loop execution
 
-With the while loop we can execute a set of statements as long as a condition is true.
+The break keyword is used to break out a for loop, or a while loop.
+
+The continue keyword is used to end the current iteration in a for loop (or a while loop), and continues to the next iteration.
 """
-
-# for num in range(1, 11):
-#     print(num)
 
 num = 1
 
 while num < 11:
     print(num)
+    if num == 5:
+        break
     num += 1
-else:
-    print("num is no longer less than 11")
+
+for num in range(1, 11):
+    if num > 5:
+        break
+    print(num)
+
+
+for num in range(1, 11):
+    if num == 5:
+        continue
+    print(num)
+
+num = 0
+
+while num < 10:
+    num += 1
+    if num == 5:
+        continue
+    print(num)
