@@ -1,19 +1,12 @@
 """
-Python For Loops
+Python range() Function
 
-A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
-
-This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
-
-With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
-
-The for loop does not require an indexing variable to set beforehand.
+The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
 """
 
-fruit = "apple"
+nums = range(0, 101, 5)
+# nums = range(10, 0, -1)
+# print(list(nums))
 
-for character in fruit:
-    print(character)
-
-for number in range(1, 11):
-    print(number)
+for num in nums:
+    print(num)
