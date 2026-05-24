@@ -1,11 +1,38 @@
 """
-Python is vs ==
+Python Match
 
-In Python, the primary difference is that == compares values, while is compares identities (memory locations).
+The match statement is used to perform different actions based on different conditions.
+
+The Python Match Statement
+
+Instead of writing many if..else statements, you can use the match statement.
+
+The match statement selects one of many code blocks to be executed.
 """
 
-a = [1, 2]
-b = [1, 2]
+day = 6
 
-print(a == b)
-print(a is b)
+match day:
+    case 1:
+        print("Sunday")
+    case 2:
+        print("Monday")
+    case 3:
+        print("Tuesday")
+    case 4:
+        print("Wednesday")
+    case 5:
+        print("Thursday")
+    case 6:
+        print("Friday")
+    case 7:
+        print("Saturday")
+    # Default case
+    case _:
+        print("Hey, this is not a valid day.")
+
+match day:
+    case 2 | 3 | 4 | 5:
+        print("This is a week day.")
+    case 1 | 6 | 7:
+        print("Hey, I love weekends!")
