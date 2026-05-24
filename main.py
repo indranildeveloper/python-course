@@ -1,13 +1,16 @@
 """
-Python enumerate() Function
+The while Loop in Python
 
-The enumerate() function takes a collection (e.g. a tuple, a string) and returns it as an enumerate object.
-
-The enumerate() function adds a counter as the key of the enumerate object.
+With the while loop we can execute a set of statements as long as a condition is true.
 """
 
-message = "hello"
-# print(list(enumerate(message)))
+# for num in range(1, 11):
+#     print(num)
 
-for index, character in enumerate(message):
-    print(f"The character at the index {index} is {character}")
+num = 1
+
+while num < 11:
+    print(num)
+    num += 1
+else:
+    print("num is no longer less than 11")
