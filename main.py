@@ -1,12 +1,20 @@
 """
-Python - Access List Items
-
-List items are indexed and you can access them by referring to the index number.
-
-The first item has index 0.
+Iterating over lists
 """
 
-fruits_list = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
-print(fruits_list[0])
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 
-print("apple" in fruits_list)
+for fruit in fruits:
+    print(fruit)
+
+for idx in range(len(fruits)):
+    print(fruits[idx])
+
+idx = 0
+
+while idx < len(fruits):
+    print(f"{idx}: {fruits[idx]}")
+    idx += 1
+
+for idx, fruit in enumerate(fruits):
+    print(f"{idx}: {fruit}")
