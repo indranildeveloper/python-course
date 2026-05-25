@@ -1,34 +1,29 @@
 """
-Python break and continue keywords to control loop execution
+Python Lists
 
-The break keyword is used to break out a for loop, or a while loop.
+Lists are used to store multiple items in a single variable.
 
-The continue keyword is used to end the current iteration in a for loop (or a while loop), and continues to the next iteration.
+In other programming languages we have the similar data structure which is Array.
+
+Lists are ordered
+
+When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
+
+If you add new items to a list, the new items will be placed at the end of the list.
 """
 
-num = 1
+fruit_one = "apple"
+fruit_two = "orange"
+fruit_three = "banana"
 
-while num < 11:
-    print(num)
-    if num == 5:
-        break
-    num += 1
+fruits_list = [fruit_one, fruit_two, fruit_three]
+my_list = ["abc", True, True, False, 5, 6.4]
 
-for num in range(1, 11):
-    if num > 5:
-        break
-    print(num)
+print(len(fruits_list))
+print(type(my_list))
 
+r = range(10)
+print(list(r))
 
-for num in range(1, 11):
-    if num == 5:
-        continue
-    print(num)
-
-num = 0
-
-while num < 10:
-    num += 1
-    if num == 5:
-        continue
-    print(num)
+fruits_list = list(("apple", "banana", "cherry"))
+print(fruits_list)
