@@ -1,22 +1,34 @@
 """
 List Methods
 
-Append Items
-To add an item to the end of the list, use the append() method.
+Remove Specified Item
 
-Insert Items
-To insert a list item at a specified index, use the insert() method.
-The insert() method inserts an item at the specified index.
+The remove() method removes the specified item.
+If there are more than one item with the specified value, the remove() method removes the first occurrence.
 
-Extend List
-To append elements from another list to the current list, use the extend() method.
+Remove Specified Index
+
+The pop() method removes the specified index.
+If you do not specify the index, the pop() method removes the last item.
+
+The del keyword also removes the specified index.
+The del keyword can also delete the list completely.
+
+
+Clear the List
+
+The clear() method empties the list.
+The list still remains, but it has no content.
 """
 
-fruits = ["apple", "banana", "cherry", "orange"]
-# fruits.append("mango")
-# second_fruit_list = ["mango", "kiwi"]
-# fruits.extend(second_fruit_list)
+fruits = ["apple", "banana", "cherry", "orange", "banana"]
+fruits.remove("banana")
+removed_item = fruits.pop()
+print(removed_item)
 
-fruits.insert(2, "mango")
+del fruits[1]
+del fruits
+
+fruits.clear()
 
 print(fruits)
