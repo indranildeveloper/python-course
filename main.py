@@ -1,34 +1,30 @@
 """
 List Methods
 
-Remove Specified Item
+Python List index() Method
+The index() method returns the position at the first occurrence of the specified value.
 
-The remove() method removes the specified item.
-If there are more than one item with the specified value, the remove() method removes the first occurrence.
+Python List count() Method
+The count() method returns the number of elements with the specified value.
 
-Remove Specified Index
+Python List reverse() Method
+The reverse() method reverses the sorting order of the elements.
 
-The pop() method removes the specified index.
-If you do not specify the index, the pop() method removes the last item.
+Python List sort() Method
+The sort() method sorts the list ascending by default.
 
-The del keyword also removes the specified index.
-The del keyword can also delete the list completely.
-
-
-Clear the List
-
-The clear() method empties the list.
-The list still remains, but it has no content.
+Python String join() Method
+The join() method takes all items in an iterable and joins them into one string.
 """
 
-fruits = ["apple", "banana", "cherry", "orange", "banana"]
-fruits.remove("banana")
-removed_item = fruits.pop()
-print(removed_item)
+fruits = ["apple", "banana", "cherry", "kiwi", "mango", "orange", "cherry"]
 
-del fruits[1]
-del fruits
+print(fruits.index("apple"))
+print(fruits.count("cherry"))
 
-fruits.clear()
-
+fruits.reverse()
+fruits.sort(reverse=False)
 print(fruits)
+
+fruits_str = "#".join(fruits)
+print(fruits_str)
