@@ -1,21 +1,16 @@
 """
-Python - List Comprehension
-
-List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
-
-The Syntax
-newlist = [expression for item in iterable if condition == True]
+Nested List
 """
 
-fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
-# fruits_new = []
+# for list in nested_list:
+#     for num in list:
+#         print(num)
 
-# for fruit in fruits:
-#     if "a" in fruit:
-#         fruits_new.append(fruit)
+# nested_list = [[j for j in range(1, 4)] for i in range(1, 4)]
 
-# fruits_new = [fruit for fruit in fruits if "a" in fruit]
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-fruits_new = [fruit if fruit != "banana" else "orange" for fruit in fruits]
+flat_list = [item for row in nested_list for item in row]
 
-print(fruits_new)
+print(nested_list)
+print(flat_list)
