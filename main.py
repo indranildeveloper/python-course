@@ -1,13 +1,9 @@
 """
-List Slicing
-
-The general syntax for a slice is: list[start:stop:step]
-
-It creates a copy of the list.
+Swapping list elements
 """
 
-fruits = ["apple", "banana", "cherry", "kiwi", "mango", "orange", "cherry"]
+fruits = ["apple", "banana"]
 
-fruits_copy = fruits[6:1:-1]
+fruits[0], fruits[1] = fruits[1], fruits[0]
 
-print(fruits_copy)
+print(fruits)
