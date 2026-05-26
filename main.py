@@ -8,13 +8,14 @@ newlist = [expression for item in iterable if condition == True]
 """
 
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# fruits_new = []
 
-fruits_upper = []
+# for fruit in fruits:
+#     if "a" in fruit:
+#         fruits_new.append(fruit)
 
-for fruit in fruits:
-    fruits_upper.append(fruit.upper())
+# fruits_new = [fruit for fruit in fruits if "a" in fruit]
 
-fruits_upper = [fruit.upper() for fruit in fruits]
+fruits_new = [fruit if fruit != "banana" else "orange" for fruit in fruits]
 
-print(fruits)
-print(fruits_upper)
+print(fruits_new)
