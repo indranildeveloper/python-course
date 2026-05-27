@@ -1,24 +1,19 @@
 """
 Python Dictionaries
 
-Dictionary
+Accessing Items
 
-Dictionaries are used to store data values in key:value pairs.
-A dictionary is a collection which is ordered, changeable and do not allow duplicates.
+You can access the items of a dictionary by referring to its key name, inside square brackets.
+There is also a method called get() that will give you the same result.
 
-The keys can be numbers or strings and the values can be any data type.
+Get Keys
+The keys() method will return a list of all the keys in the dictionary.
 
-Ordered or Unordered?
+Get Values
+The values() method will return a list of all the values in the dictionary.
 
-As of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
-
-When we say that dictionaries are ordered, it means that the items have a defined order, and that order will not change.
-
-Unordered means that the items do not have a defined order, you cannot refer to an item by using an index.
-
-Changeable
-
-Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
+Get Items
+The items() method will return each item in a dictionary, as tuples in a list.
 """
 
 car_details = {
@@ -29,6 +24,8 @@ car_details = {
     "colors": ["red", "black", "purple"],
 }
 
-person_details = dict(name="John", age=36, country="USA")
-
-print(person_details)
+print(car_details["is_active"])
+print(car_details.get("is_active"))
+print(car_details.keys())
+print(car_details.values())
+print(car_details.items())
