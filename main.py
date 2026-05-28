@@ -24,8 +24,16 @@ car_details = {
     "colors": ["red", "black", "purple"],
 }
 
-print(car_details["is_active"])
-print(car_details.get("is_active"))
-print(car_details.keys())
-print(car_details.values())
+for x in car_details:
+    print(car_details[x])
+
+for key in car_details.keys():
+    print(key)
+
+for value in car_details.values():
+    print(value)
+
 print(car_details.items())
+
+for key, value in car_details.items():
+    print(f"{key}: {value}")
