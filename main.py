@@ -1,17 +1,14 @@
 """
 Python Dictionaries
 
-Python Dictionary clear() Method
-The clear() method removes all the elements from a dictionary.
+Python Dictionary pop() Method
+The pop() method removes the specified item from the dictionary.
 
-Python Dictionary copy() Method
-The copy() method returns a copy of the specified dictionary.
+Python Dictionary popitem() Method
+The popitem() method removes the item that was last inserted into the dictionary. In versions before 3.7, the popitem() method removes a random item.
 
-Python Dictionary fromkeys() Method
-The fromkeys() method returns a dictionary with the specified keys and the specified value.
-
-Python Dictionary get() Method
-The get() method returns the value of the item with the specified key.
+Python Dictionary update() Method
+The update() method inserts the specified items to the dictionary.
 """
 
 car_details = {
@@ -19,19 +16,14 @@ car_details = {
     "model": "Mustang",
     "year": 1964,
     "is_active": False,
-    "colors": ["red", "black", "purple"],
 }
 
-print(car_details["brand"])
-print(car_details.get("abc"))
+popped_value = car_details.pop("model")
+popped_value = car_details.popitem()
+print(popped_value)
 
-# car_details.clear()
+car_color = {"color": "red"}
 
-# car_details_copy = car_details.copy()
-# print(car_details is car_details_copy)
+car_details.update(car_color)
 
-# x = ["key1", "key2", "key3"]
-# y = 0
-
-# demo_dictionary = dict.fromkeys(x, y)
-# print(demo_dictionary)
+print(car_details)
