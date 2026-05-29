@@ -1,29 +1,28 @@
 """
 Python Dictionaries
 
-Python Dictionary pop() Method
-The pop() method removes the specified item from the dictionary.
+Dictionary Comprehension in Python
 
-Python Dictionary popitem() Method
-The popitem() method removes the item that was last inserted into the dictionary. In versions before 3.7, the popitem() method removes a random item.
+Dictionary comprehension is a concise way to create dictionaries in Python using a single line of code.
 
-Python Dictionary update() Method
-The update() method inserts the specified items to the dictionary.
+Syntax:
+<dict_name> = {<new_key>:<new_value> for <item> in <iterable>}
 """
 
-car_details = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964,
-    "is_active": False,
-}
+squares = {num: num**2 for num in range(1, 11)}
+# print(squares)
 
-popped_value = car_details.pop("model")
-popped_value = car_details.popitem()
-print(popped_value)
+person = {" Name": "John", " CITY ": "London"}
+cleaned_data = {key.strip().lower(): value.upper() for key, value in person.items()}
 
-car_color = {"color": "red"}
+# print(cleaned_data)
 
-car_details.update(car_color)
+ratings = {"John": 4.7, "Jane": 3.9, "Sara": 4.2}
+top_rated = {name: score for name, score in ratings.items() if score >= 4.0}
 
-print(car_details)
+# print(top_rated)
+
+scores = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+results = {score: "pass" if score >= 50 else "retry" for score in scores}
+
+print(results)
