@@ -1,28 +1,46 @@
 """
-Python Dictionaries
+Python Tuples
 
-Dictionary Comprehension in Python
+Tuples are used to store multiple items in a single variable.
+A tuple is a collection which is ordered and immutable/unchangeable.
 
-Dictionary comprehension is a concise way to create dictionaries in Python using a single line of code.
+Tuple Items
 
-Syntax:
-<dict_name> = {<new_key>:<new_value> for <item> in <iterable>}
+Tuple items are ordered, unchangeable, and allow duplicate values.
+Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+
+Ordered
+
+When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
+
+Unchangeable
+
+Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+
+Allow Duplicates
+
+Since tuples are indexed, they can have items with the same value.
+
+Create Tuple With One Item
+
+To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
 """
 
-squares = {num: num**2 for num in range(1, 11)}
-# print(squares)
+fruits_list = ["apple", "banana"]
+fruits_list[0] = "cherry"
+print(fruits_list)
 
-person = {" Name": "John", " CITY ": "London"}
-cleaned_data = {key.strip().lower(): value.upper() for key, value in person.items()}
+fruits = ("apple", "banana", "cherry")
 
-# print(cleaned_data)
+print(list(fruits))
+print(tuple(fruits))
 
-ratings = {"John": 4.7, "Jane": 3.9, "Sara": 4.2}
-top_rated = {name: score for name, score in ratings.items() if score >= 4.0}
+fruits[0] = "mango"
 
-# print(top_rated)
+print(fruits)
 
-scores = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-results = {score: "pass" if score >= 50 else "retry" for score in scores}
+person = ("john",)
+print(type(person))
 
-print(results)
+fruits = tuple(("apple", "cherry", "mango"))
+print(fruits)
