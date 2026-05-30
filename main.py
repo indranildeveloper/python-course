@@ -1,33 +1,40 @@
 """
 Python Functions
 
-Return Values
+Python Function Arguments
 
-Functions can send data back to the code that called them using the return statement.
-When a function reaches a return statement, it stops executing and sends the result back.
-If a function doesn't have a return statement, it returns None by default.
+Arguments
 
-The pass Statement
+Information can be passed into functions as arguments.
 
-Function definitions cannot be empty. If you need to create a function placeholder without any code, use the pass statement.
-The pass statement is often used when developing, allowing you to define the structure first and implement details later.
+Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.
+
+Parameters vs Arguments
+
+The terms parameter and argument can be used for the same thing: information that are passed into a function.
+
+From a function's perspective:
+A parameter is the variable listed inside the parentheses in the function definition.
+An argument is the actual value that is sent to the function when it is called.
+
+Number of Arguments
+
+By default, a function must be called with the correct number of arguments.
 """
 
-# nums = [1, 2, 3, 4, 5]
 
-# print(len(nums))
-
-
-def get_greeting():
-    print("Before return.")
-    return "Hello There!"
-    print("After return.")
+def greet(name):  # name -> parameter
+    print(f"Hi there, {name}")
 
 
-# message = get_greeting()
+# greet("John")  # "John" -> argument
+# greet("Jane")
+# greet("Sara")
 
-# print(get_greeting())
+
+def sum_nums(num_one, num_two):
+    return num_one + num_two
 
 
-def my_function():
-    pass
+result = sum_nums(5, 8)
+print(result)
