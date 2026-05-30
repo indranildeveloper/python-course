@@ -1,40 +1,35 @@
 """
 Python Functions
 
-Python Function Arguments
+Default Parameter Values
 
-Arguments
-
-Information can be passed into functions as arguments.
-
-Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.
-
-Parameters vs Arguments
-
-The terms parameter and argument can be used for the same thing: information that are passed into a function.
-
-From a function's perspective:
-A parameter is the variable listed inside the parentheses in the function definition.
-An argument is the actual value that is sent to the function when it is called.
-
-Number of Arguments
-
-By default, a function must be called with the correct number of arguments.
+You can assign default values to parameters. If the function is called without an argument, it uses the default value.
 """
 
-
-def greet(name):  # name -> parameter
-    print(f"Hi there, {name}")
-
-
-# greet("John")  # "John" -> argument
-# greet("Jane")
-# greet("Sara")
+# def greet(name="friend"):
+#     print(f"Hello, {name}")
 
 
-def sum_nums(num_one, num_two):
+# greet()
+# greet("John")
+
+# my_list = [1, 2, 3]
+# removed_value = my_list.pop()
+
+# print(removed_value)
+
+
+def add(num_one, num_two):
     return num_one + num_two
 
 
-result = sum_nums(5, 8)
-print(result)
+def subtract(num_one, num_two):
+    return num_one - num_two
+
+
+def math(num_one, num_two, fn=add):
+    return fn(num_one, num_two)
+
+
+print(math(2, 2))
+print(math(10, 4, subtract))
