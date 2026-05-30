@@ -1,35 +1,23 @@
 """
 Python Functions
 
-Default Parameter Values
+Positional Arguments
 
-You can assign default values to parameters. If the function is called without an argument, it uses the default value.
+When you call a function with arguments without using keywords, they are called positional arguments.
+Positional arguments must be in the correct order.
+
+Keyword Arguments
+
+You can send arguments with the key = value syntax.
+This way, with keyword arguments, the order of the arguments does not matter.
+The phrase Keyword Arguments is often shortened to kwargs in Python documentation.
 """
 
-# def greet(name="friend"):
-#     print(f"Hello, {name}")
+
+def get_full_name(first_name="Sara", last_name="Smith"):
+    print(f"Your full name is: {first_name} {last_name}")
 
 
-# greet()
-# greet("John")
-
-# my_list = [1, 2, 3]
-# removed_value = my_list.pop()
-
-# print(removed_value)
-
-
-def add(num_one, num_two):
-    return num_one + num_two
-
-
-def subtract(num_one, num_two):
-    return num_one - num_two
-
-
-def math(num_one, num_two, fn=add):
-    return fn(num_one, num_two)
-
-
-print(math(2, 2))
-print(math(10, 4, subtract))
+get_full_name("John", "Doe")
+get_full_name(first_name="Jane", last_name="Doe")
+get_full_name()
