@@ -1,17 +1,40 @@
 """
-Set comprehension
+Python Functions
 
-Set comprehension is a concise way to create sets in Python by iterating over an iterable (like a list, string, or range) and applying an optional condition.
+A function is a block of code which only runs when it is called.
+A function can return data as a result.
+A function helps avoiding code repetition.
 
-The basic syntax for a set comprehension is:
-{expression for item in iterable if condition}
+Creating a Function
+
+In Python, a function is defined using the def keyword, followed by a function name and parentheses.
+The code inside the function must be indented. Python uses indentation to define code blocks.
+
+Calling a Function
+
+To call a function, write its name followed by parentheses.
+
+Function Names
+
+Function names follow the same rules as variable names in Python.
+
+A function name must start with a letter or underscore
+A function name can only contain letters, numbers, and underscores
+Function names are case-sensitive (myFunction and myfunction are different)
+
+It's good practice to use descriptive names that explain what the function does.
 """
 
-num_set = {num for num in [1, 2, 2, 2, 3]}
-square_set = {num**2 for num in range(1, 11)}
-even_nums = {num for num in range(1, 11) if num % 2 == 0}
-str_set = {char.upper() for char in "hello"}
-# print(num_set)
-# print(square_set)
-# print(even_nums)
-print(str_set)
+
+def say_hello():
+    print("Hello")
+
+
+say_hello()
+say_hello()
+say_hello()
+say_hello()
+say_hello()
+say_hello()
+say_hello()
+say_hello()
