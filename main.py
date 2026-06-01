@@ -8,27 +8,30 @@ However, sometimes you may not know how many arguments that will be passed into 
 
 *args and **kwargs allow functions to accept a unknown number of arguments.
 
-Arbitrary Arguments - *args
+Arbitrary Keyword Arguments - **kwargs
 
-If you do not know how many arguments will be passed into your function, add a * before the parameter name.
-This way, the function will receive a tuple of arguments and can access the items accordingly.
-Arbitrary Arguments are often shortened to *args in Python documentation.
+If you do not know how many keyword arguments will be passed into your function, add two asterisks ** before the parameter name.
+This way, the function will receive a dictionary of arguments and can access the items accordingly.
+Arbitrary Keyword Arguments are often shortened to **kwargs in Python documentation.
 
-What is *args?
+Using **kwargs with Regular Arguments
 
-The *args parameter allows a function to accept any number of positional arguments.
-Inside the function, args becomes a tuple containing all the passed arguments.
+You can combine regular parameters with **kwargs.
+
+Combining *args and **kwargs
+
+You can use both *args and **kwargs in the same function.
 """
 
 
-def sum_numbers(*numbers):
-    print(numbers)
-    total = 0
-    for num in numbers:
-        total += num
-    return total
+def greet(username, *args, **kwargs):
+    print(args)
+    print(kwargs)
+    first_name = kwargs["first_name"]
+    last_name = kwargs["last_name"]
+    age = kwargs["age"]
+    print(f"Hello there: {first_name} {last_name}, you are {age}")
+    print(f"Your username is {username}")
 
 
-print(sum_numbers(1, 2, 3, 4, 5))
-print(sum_numbers(10, 20))
-print(sum_numbers(5))
+greet("john", 40, "hi there", first_name="John", last_name="Doe", age=25, country="USA")
