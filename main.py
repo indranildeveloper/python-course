@@ -1,12 +1,12 @@
 """
-Unpacking Arguments
+Unpacking Dictionaries with **
 """
 
 
-def sum_numbers(a, b, c):
-    return a + b + c
+def greet(first_name, last_name):
+    print(f"Hello there, {first_name} {last_name}")
 
 
-numbers = (1, 2, 3)
-
-print(sum_numbers(*numbers))  # sum_numbers(1, 2, 3)
+person = {"first_name": "Sara", "last_name": "Smith"}
+# greet(first_name="John", last_name="Doe")
+greet(**person)  # greet(first_name="Sara", last_name="Smith")
