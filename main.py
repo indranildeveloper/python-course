@@ -1,23 +1,12 @@
 """
-Python parameter ordering in functions
-
-- parameters
-- *args
-- default parameters
-- **kwargs
+Unpacking Arguments
 """
 
 
-def greet(username, *args, person_name="John Doe", **kwargs):
-    print(username)
-    print(args)
-    print(kwargs)
-    print(person_name)
-    first_name = kwargs["first_name"]
-    last_name = kwargs["last_name"]
-    age = kwargs["age"]
-    print(f"Hello there: {first_name} {last_name}, you are {age}")
-    print(f"Your username is {username}")
+def sum_numbers(a, b, c):
+    return a + b + c
 
 
-greet("john", 40, "hi there", first_name="John", last_name="Doe", age=25, country="USA")
+numbers = (1, 2, 3)
+
+print(sum_numbers(*numbers))  # sum_numbers(1, 2, 3)
