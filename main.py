@@ -1,32 +1,18 @@
 """
-Python *args and **kwargs
+Python parameter ordering in functions
 
-*args and **kwargs
-
-By default, a function must be called with the correct number of arguments.
-However, sometimes you may not know how many arguments that will be passed into your function.
-
-*args and **kwargs allow functions to accept a unknown number of arguments.
-
-Arbitrary Keyword Arguments - **kwargs
-
-If you do not know how many keyword arguments will be passed into your function, add two asterisks ** before the parameter name.
-This way, the function will receive a dictionary of arguments and can access the items accordingly.
-Arbitrary Keyword Arguments are often shortened to **kwargs in Python documentation.
-
-Using **kwargs with Regular Arguments
-
-You can combine regular parameters with **kwargs.
-
-Combining *args and **kwargs
-
-You can use both *args and **kwargs in the same function.
+- parameters
+- *args
+- default parameters
+- **kwargs
 """
 
 
-def greet(username, *args, **kwargs):
+def greet(username, *args, person_name="John Doe", **kwargs):
+    print(username)
     print(args)
     print(kwargs)
+    print(person_name)
     first_name = kwargs["first_name"]
     last_name = kwargs["last_name"]
     age = kwargs["age"]
