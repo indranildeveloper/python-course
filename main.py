@@ -1,18 +1,25 @@
 """
-Python map() Function
+Python filter() Function
 
-The map() function executes a specified function for each item in an iterable. The item is sent to the function as a parameter.
+The filter() function returns an iterator where the items are filtered through a function to test if the item is accepted or not.
 """
 
-# def my_function(item):
-#     return len(item)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+
+print(even_numbers)
+
+ages = [5, 10, 20, 7, 8, 18, 64, 32]
 
 
-fruits_one = ("apple", "banana", "cherry")
-fruits_two = ("orange", "lemon", "pineapple")
+def filter_adults(age):
+    if age < 18:
+        return False
+    else:
+        return True
 
-fruit_lengths = list(
-    map(lambda item_one, item_two: item_one + item_two, fruits_one, fruits_two)
-)
 
-print(fruit_lengths)
+adults = list(filter(filter_adults, ages))
+
+print(adults)
