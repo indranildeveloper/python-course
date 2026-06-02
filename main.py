@@ -1,38 +1,18 @@
 """
-Python Lambda
+Python map() Function
 
-Lambda Functions
-
-A lambda function is a small anonymous function.
-A lambda function can take any number of arguments, but can only have one expression.
-
-Why Use Lambda Functions?
-
-The power of lambda is better shown when you use them as an anonymous function inside another function.
-Use lambda functions when an anonymous function is required for a short period of time.
+The map() function executes a specified function for each item in an iterable. The item is sent to the function as a parameter.
 """
 
-# def sum_ten(num):
-#     return num + 10
+# def my_function(item):
+#     return len(item)
 
 
-# sum_ten = lambda num: num + 10
+fruits_one = ("apple", "banana", "cherry")
+fruits_two = ("orange", "lemon", "pineapple")
 
-# sum_two_numbers = lambda a, b: a + b
+fruit_lengths = list(
+    map(lambda item_one, item_two: item_one + item_two, fruits_one, fruits_two)
+)
 
-# sum_three_numbers = lambda a, b, c: a + b + c
-
-# print(sum_ten(5))
-# print(sum_two_numbers(10, 15))
-# print(sum_three_numbers(10, 20, 30))
-
-
-def multiplier(factor):
-    return lambda number: number * factor
-
-
-double = multiplier(2)
-triple = multiplier(3)
-
-print(double(10))
-print(triple(10))
+print(fruit_lengths)
