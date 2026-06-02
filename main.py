@@ -1,25 +1,23 @@
 """
-Python filter() Function
+Python all() Function
 
-The filter() function returns an iterator where the items are filtered through a function to test if the item is accepted or not.
+The all() function returns True if all items in an iterable are true, otherwise it returns False.
+If the iterable object is empty, the all() function also returns True.
+When used on a dictionary, the all() function checks if all the keys are true, not the values.
+
+Python any() Function
+
+The any() function returns True if any item in an iterable are true, otherwise it returns False.
+If the iterable object is empty, the any() function will return False.
+When used on a dictionary, the any() function checks if any of the keys are true, not the values.
 """
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+my_list = [True, True, True]
+my_tuple = (0, 1, 1)
+my_set = {0, 1, 0}
+my_dictionary = {0: "apple", 1: "banana"}
 
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+# result = all(my_dictionary)
+result = any(my_dictionary)
 
-print(even_numbers)
-
-ages = [5, 10, 20, 7, 8, 18, 64, 32]
-
-
-def filter_adults(age):
-    if age < 18:
-        return False
-    else:
-        return True
-
-
-adults = list(filter(filter_adults, ages))
-
-print(adults)
+print(result)
