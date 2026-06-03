@@ -1,32 +1,42 @@
 """
-Python sorted() Function
+Python min() Function
 
-The sorted() function returns a sorted list of the specified iterable object.
+The min() function returns the item with the lowest value, or the item with the lowest value in an iterable.
+If the values are strings, an alphabetically comparison is done.
 
-You can specify ascending or descending order. Strings are sorted alphabetically, and numbers are sorted numerically.
+Python max() Function
 
-Note: You cannot sort a list that contains BOTH string values AND numeric values.
+The max() function returns the item with the highest value, or the item with the highest value in an iterable.
+If the values are strings, an alphabetically comparison is done.
 """
 
-# alphabets = ("b", "g", "z", "d", "x", "u", "j", "h")
+lowest = min(10, 5, 23, 8)
+highest = max(10, 5, 23, 8)
 
-# sorted_alphabets = sorted(alphabets)
+numbers = [45, 23, 99, 65, 78, 4]
 
-# print(sorted_alphabets)
+names = ["Alice", "Bob", "Charlie", "David"]
 
-nums = [1, 11, 45, 2, 6, 75, 9]
-alphabets = ("b", "g", "z", "d", "x", "u", "j", "h")
-people = ["John", "Jane", "Mary", "Sally"]
+empty_list = []
 
+prices = {"apple": 1.5, "banana": 0.8, "cherry": 3.0}
 
-def get_closest(num):
-    return abs(10 - num)
+print(min(prices.values()))
+print(max(prices.values()))
 
+print(max(prices, key=prices.get))
 
-sorted_numbers = sorted(nums, key=get_closest)
-sorted_alphabets = sorted(alphabets, reverse=True)
-sorted_people = sorted(people, key=len, reverse=True)
+# print(min(empty_list, default="Hey, there is no item."))
 
-print(sorted_numbers)
-# print(sorted_alphabets)
-# print(sorted_people)
+# print(min(names, key=lambda n: len(n)))
+# print(max(names, key=lambda n: len(n)))
+# print(min(names, key=len))
+# print(max(names, key=len))
+
+# print(lowest)
+# print(highest)
+# print(min(numbers))
+# print(max(numbers))
+
+# print(min("banana", "apple", "cherry"))
+# print(max("banana", "apple", "cherry"))
