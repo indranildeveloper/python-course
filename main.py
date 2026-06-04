@@ -14,8 +14,14 @@ try:
     # print(fruits)
     names = []
     names[5]
+    print("hello")
 except NameError as error:
     print("Name Error Occurred.")
     print(error)
+    raise NameError("do something else.")
 except:
     print("Something went wrong.")
+else:
+    print("Nothing went wrong.")
+finally:
+    print("The try and except block finished.")
