@@ -1,42 +1,16 @@
 """
-Python min() Function
+Python reversed() Function
 
-The min() function returns the item with the lowest value, or the item with the lowest value in an iterable.
-If the values are strings, an alphabetically comparison is done.
-
-Python max() Function
-
-The max() function returns the item with the highest value, or the item with the highest value in an iterable.
-If the values are strings, an alphabetically comparison is done.
+The reversed() function returns a reversed iterator object.
 """
 
-lowest = min(10, 5, 23, 8)
-highest = max(10, 5, 23, 8)
+alphabets = ["a", "b", "c", "d", "e"]
 
-numbers = [45, 23, 99, 65, 78, 4]
+# alphabets.reverse()
 
-names = ["Alice", "Bob", "Charlie", "David"]
+# reversed_alphabets = list(reversed(alphabets))
 
-empty_list = []
+# print(reversed_alphabets)
 
-prices = {"apple": 1.5, "banana": 0.8, "cherry": 3.0}
-
-print(min(prices.values()))
-print(max(prices.values()))
-
-print(max(prices, key=prices.get))
-
-# print(min(empty_list, default="Hey, there is no item."))
-
-# print(min(names, key=lambda n: len(n)))
-# print(max(names, key=lambda n: len(n)))
-# print(min(names, key=len))
-# print(max(names, key=len))
-
-# print(lowest)
-# print(highest)
-# print(min(numbers))
-# print(max(numbers))
-
-# print(min("banana", "apple", "cherry"))
-# print(max("banana", "apple", "cherry"))
+for ch in reversed("hello"):
+    print(ch)
