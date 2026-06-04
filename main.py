@@ -1,16 +1,15 @@
 """
-Python reversed() Function
+Python len() Function
 
-The reversed() function returns a reversed iterator object.
+The len() function returns the number of items in an object.
+
+When the object is a string, the len() function returns the number of characters in the string.
 """
 
-alphabets = ["a", "b", "c", "d", "e"]
+fruits = ["apple", "banana", "cherry"]
 
-# alphabets.reverse()
+print(fruits.__len__())
+print("hello".__len__())
 
-# reversed_alphabets = list(reversed(alphabets))
-
-# print(reversed_alphabets)
-
-for ch in reversed("hello"):
-    print(ch)
+# print(len(fruits))
+# print(len("hello"))
