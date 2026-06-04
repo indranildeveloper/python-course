@@ -1,20 +1,21 @@
 """
-Python raise Keyword
+Python Try Except
 
-The raise keyword is used to raise an exception.
-You can define what kind of error to raise, and the text to print to the user.
+The try block lets you test a block of code for errors.
+
+The except block lets you handle the error.
+
+The else block lets you execute code when there is no error.
+
+The finally block lets you execute code, regardless of the result of the try- and except blocks.
 """
 
-# positive_number = -1
-
-# if positive_number < 0:
-#     raise Exception("Hey you can not provide and number less than zero.")
-# else:
-#     print("Your number is all good!")
-
-number = "hello"
-
-if not type(number) is int:
-    raise TypeError("Only integers are allowed.")
-else:
-    print("Your number is all good!")
+try:
+    # print(fruits)
+    names = []
+    names[5]
+except NameError as error:
+    print("Name Error Occurred.")
+    print(error)
+except:
+    print("Something went wrong.")
