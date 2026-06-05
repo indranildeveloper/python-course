@@ -1,10 +1,13 @@
 """
-Use external modules
+The __name__ variable
 """
 
-# Black formatter command
-# black {source_file_or_directory}
+from greet import greet
 
-import cowsay
 
-cowsay.cow("Hello World!")
+def say_hello():
+    print(f"Inside the main module and the __name__ is {__name__}")
+
+
+say_hello()
+greet()

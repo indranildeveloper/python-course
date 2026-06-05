@@ -1,2 +1,6 @@
-def greet_person(name):
-    return f"Hello there, {name}"
+def greet():
+    print(f"Inside the greet module and __name__ is {__name__}")
+
+
+if __name__ == "__main__":
+    greet()
