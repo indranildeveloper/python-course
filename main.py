@@ -1,22 +1,11 @@
 """
 Python Modules
-
-What is a Module?
-
-Consider a module to be the same as a code library.
-A file containing a set of functions you want to include in your application.
 """
 
-# import random as rand
-from random import randint as random_integer, choice
+# import greet
 
-# from random import *
+# print(greet.greet("John"))
 
-fruits = ["apple", "banana", "cherry"]
+from greet import greet_person
 
-print(random_integer(1, 10))
-print(choice(fruits))
-
-# random.shuffle(fruits)
-
-# print(fruits)
+print(greet_person("Jane"))
