@@ -1,27 +1,22 @@
 """
-Python Try Except
+Python Modules
 
-The try block lets you test a block of code for errors.
+What is a Module?
 
-The except block lets you handle the error.
-
-The else block lets you execute code when there is no error.
-
-The finally block lets you execute code, regardless of the result of the try- and except blocks.
+Consider a module to be the same as a code library.
+A file containing a set of functions you want to include in your application.
 """
 
-try:
-    # print(fruits)
-    names = []
-    names[5]
-    print("hello")
-except NameError as error:
-    print("Name Error Occurred.")
-    print(error)
-    raise NameError("do something else.")
-except:
-    print("Something went wrong.")
-else:
-    print("Nothing went wrong.")
-finally:
-    print("The try and except block finished.")
+# import random as rand
+from random import randint as random_integer, choice
+
+# from random import *
+
+fruits = ["apple", "banana", "cherry"]
+
+print(random_integer(1, 10))
+print(choice(fruits))
+
+# random.shuffle(fruits)
+
+# print(fruits)
