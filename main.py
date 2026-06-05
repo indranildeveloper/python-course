@@ -1,11 +1,10 @@
 """
-Python Modules
+Use external modules
 """
 
-# import greet
+# Black formatter command
+# black {source_file_or_directory}
 
-# print(greet.greet("John"))
+import cowsay
 
-from greet import greet_person
-
-print(greet_person("Jane"))
+cowsay.cow("Hello World!")

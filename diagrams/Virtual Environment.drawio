@@ -1,0 +1,27 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="87TQNIDCHBBn0uf7wZ0j">
+        <mxGraphModel dx="2785" dy="1982" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="UQU8qtJ-y6cTk6wImGMe-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="UQU8qtJ-y6cTk6wImGMe-2" target="EN0mU9oJ_PFj96Qt3sp7-2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="395" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="EN0mU9oJ_PFj96Qt3sp7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UQU8qtJ-y6cTk6wImGMe-2" target="EN0mU9oJ_PFj96Qt3sp7-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="UQU8qtJ-y6cTk6wImGMe-2" value="&lt;font style=&quot;font-size: 100px;&quot; face=&quot;Inter&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Inter&quot;&gt;&lt;b&gt;Python Projects&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-180" y="-150" width="1159" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="EN0mU9oJ_PFj96Qt3sp7-2" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;&lt;b&gt;Project One&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 72px;&quot;&gt;Django v3.2&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-550" y="340" width="750" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="EN0mU9oJ_PFj96Qt3sp7-4" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;&lt;b&gt;Project Two&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 72px;&quot;&gt;Django v5.2&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="340" width="750" height="310" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
