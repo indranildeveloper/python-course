@@ -1,10 +1,19 @@
 """
-Python __init__() Method
+Python self Parameter
 
-The __init__() Method
-All classes have a built-in method called __init__(), which is always executed when the class is being initiated.
+The self Parameter
+The self parameter is a reference to the current instance of the class.
 
-The __init__() method is used to assign values to object properties, or to perform operations that are necessary when the object is being created.
+It is used to access properties and methods that belong to the class.
+
+Why Use self?
+Without self, Python would not know which object's properties you want to access.
+
+self Does Not Have to Be Named "self":
+
+It does not have to be named self, you can call it whatever you like, but it has to be the first parameter of any method in the class.
+
+While you can use a different name, it is strongly recommended to use self as it is the convention in Python and makes your code more readable to others.
 """
 
 
@@ -13,9 +22,25 @@ class Person:
         self.name = name
         self.age = age
 
+    def greet(self):
+        return f"Hi there, {self.name}"
+
+    def likes(self, thing):
+        return f"{self.name} likes {thing}"
+
+    def welcome(self):
+        message = self.greet()
+        print(message, "Welcome to our app.")
+
 
 person_one = Person("John", 22)
 person_two = Person("Jane", 24)
 
-print(person_one.name, person_one.age)
-print(person_two.name, person_two.age)
+print(person_one.greet())
+print(person_two.greet())
+
+print(person_one.likes("Ice cream"))
+print(person_two.likes("Candy"))
+
+person_one.welcome()
+person_two.welcome()
