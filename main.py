@@ -1,26 +1,26 @@
 """
-Python self Parameter
+Python Class Attributes
 
-The self Parameter
-The self parameter is a reference to the current instance of the class.
+Class Properties
 
-It is used to access properties and methods that belong to the class.
+Properties are variables that belong to a class. They store data for each object created from the class.
 
-Why Use self?
-Without self, Python would not know which object's properties you want to access.
+Class Properties vs Object Properties
 
-self Does Not Have to Be Named "self":
+Properties defined inside __init__() belong to each object (instance properties).
 
-It does not have to be named self, you can call it whatever you like, but it has to be the first parameter of any method in the class.
-
-While you can use a different name, it is strongly recommended to use self as it is the convention in Python and makes your code more readable to others.
+Properties defined outside methods belong to the class itself (class properties) and are shared by all objects.
 """
 
 
 class Person:
+    species = "Human"
+    person_created = 0
+
     def __init__(self, name, age=20):
         self.name = name
         self.age = age
+        Person.person_created += 1
 
     def greet(self):
         return f"Hi there, {self.name}"
@@ -33,14 +33,10 @@ class Person:
         print(message, "Welcome to our app.")
 
 
+print(Person.person_created)
 person_one = Person("John", 22)
 person_two = Person("Jane", 24)
+print(Person.person_created)
 
-print(person_one.greet())
-print(person_two.greet())
 
-print(person_one.likes("Ice cream"))
-print(person_two.likes("Candy"))
-
-person_one.welcome()
-person_two.welcome()
+# print(Person.species)
