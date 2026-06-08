@@ -1,7 +1,7 @@
 """
-Python Class Methods
+Python __repr__() method
 
-In Python, a class method is a method that is bound directly to the class rather than its individual object instances.
+In Python, __repr__ is a special magic method used to return an unambiguous string representation of an object. It is primarily designed for developers, debugging, and logging.
 """
 
 from datetime import date
@@ -35,9 +35,12 @@ class Person:
         message = self.greet()
         print(message, "Welcome to our app.")
 
+    def __repr__(self):
+        return f"{self.name} is {self.age} years old."
+
 
 person_one = Person("John", 22)
 person_two = Person("Jane", 24)
 person_three = Person.from_birth_year("Sara", 2000)
-print(person_three.__dict__)
+print(person_three)
 print(Person.get_created_person_number())
