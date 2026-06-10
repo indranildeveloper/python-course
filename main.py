@@ -1,38 +1,40 @@
 """
-Multiple Inheritance
+Method Resolution Order (MRO)
 
-Multiple inheritance in Python is a feature that allows a child class to inherit attributes and methods from more than one parent class.
+When multiple parent classes share a method with the same name, Python needs a way to decide which one to execute. Python uses the C3 Linearization algorithm to build the Method Resolution Order (MRO).
+
+How we can check for MRO:
+1. __mro__
+2. mro()
+3. help()
 """
 
 
-class Flyer:
-    def __init__(self, name):
-        self.name = name
+class A:
+    def greet(self):
+        print("Hello from A.")
 
-    def fly(self):
-        return f"{self.name} flying high in the sky."
+
+class B(A):
+    def greet(self):
+        print("Hello from B.")
+
+
+class C(A):
+    def greet(self):
+        print("Hello from C.")
+
+
+class D(B, C):
+    def __init__(self):
+        super().__init__()
 
     def greet(self):
-        return f"Hello from flyer {self.name}"
+        print("Hello from D.")
 
 
-class Swimmer:
-    def __init__(self, name):
-        self.name = name
-
-    def swim(self):
-        return f"{self.name} is swimming good in the pond."
-
-    def greet(self):
-        return f"Hello from swimmer {self.name}"
-
-
-class Duck(Flyer, Swimmer):
-    def __init__(self, name):
-        super().__init__(name)
-
-
-captain_cook = Duck("Captain Cook")
-print(captain_cook.fly())
-print(captain_cook.swim())
-print(captain_cook.greet())
+my_obj = D()
+my_obj.greet()
+# print(D.__mro__)
+# print(D.mro())
+# print(help(D))
