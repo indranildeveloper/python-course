@@ -1,46 +1,36 @@
 """
-Python __repr__() method
+Python Inheritance
 
-In Python, __repr__ is a special magic method used to return an unambiguous string representation of an object. It is primarily designed for developers, debugging, and logging.
+Inheritance allows us to define a class that inherits all the methods and properties from another class.
+
+Parent class is the class being inherited from, also called base class.
+
+Child class is the class that inherits from another class, also called derived class.
+
+Create a Child Class
+To create a class that inherits the functionality from another class, send the parent class as a parameter when creating the child class.
 """
-
-from datetime import date
 
 
 class Person:
-    species = "Human"
-    person_created = 0
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
 
-    def __init__(self, name, age=20):
-        self.name = name
-        self.age = age
-        Person.person_created += 1
+    def full_name(self):
+        return f"The full name is: {self.first_name} {self.last_name}"
 
-    @classmethod
-    def get_created_person_number(cls):
-        return f"There are {Person.person_created} person created."
 
-    @classmethod
-    def from_birth_year(cls, name, year):
-        age = date.today().year - year
-        return cls(name, age)
+class Student(Person):
+    def __init__(self, first_name, last_name, year):
+        super().__init__(first_name, last_name)
+        self.graduation_year = year
 
     def greet(self):
-        return f"Hi there, {self.name}"
-
-    def likes(self, thing):
-        return f"{self.name} likes {thing}"
-
-    def welcome(self):
-        message = self.greet()
-        print(message, "Welcome to our app.")
-
-    def __repr__(self):
-        return f"{self.name} is {self.age} years old."
+        return f"Welcome, {self.first_name} {self.last_name} to the class of {self.graduation_year}."
 
 
-person_one = Person("John", 22)
-person_two = Person("Jane", 24)
-person_three = Person.from_birth_year("Sara", 2000)
-print(person_three)
-print(Person.get_created_person_number())
+s_one = Student("John", "Doe", 2024)
+print(s_one.graduation_year)
+print(s_one.full_name())
+print(s_one.greet())
