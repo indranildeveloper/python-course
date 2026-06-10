@@ -1,41 +1,47 @@
 """
-Python Encapsulation
+Python Polymorphism
+
+The word "polymorphism" means "many forms", and in programming it refers to methods/functions/operators with the same name that can be executed on many objects or classes.
+
+Function Polymorphism
+
+An example of a Python function that can be used on different objects is the len() function.
+
+Class Polymorphism
+
+Polymorphism is often used in Class methods, where we can have multiple classes with the same method name.
 """
 
 
-class Person:
-    def __init__(self, name, age, salary):
-        self.name = name
-        self.__age = age  # private property
-        self._salary = salary  # protected property
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
 
-    @property
-    def age(self):
-        return self.__age
-
-    @age.setter
-    def age(self, new_age):
-        if self.__validate_age(new_age):
-            self.__age = new_age
-
-    # def get_age(self):
-    #     return self.__age
-
-    def __validate_age(self, age):
-        if age > 0:
-            return True
-        else:
-            raise ValueError("Age can not be less than zero.")
-
-    # def set_age(self, new_age):
-    #     if self.__validate_age(new_age):
-    #         self.__age = new_age
+    def move(self):
+        print("Moving...")
 
 
-person_one = Person("John", 24, 50000)
+class Car(Vehicle):
+    pass
 
-# person_one.set_age(30)
-# print(person_one.get_age())
 
-person_one.age = 30
-print(person_one.age)
+class Boat(Vehicle):
+    def move(self):
+        print("Sailing...")
+
+
+class Plane(Vehicle):
+    def move(self):
+        print("Flying...")
+
+
+car = Car("Ford", "Mustang")
+boat = Boat("Boat Brand", "Boat Model")
+plane = Plane("Boeing", "747")
+
+
+for v in (car, boat, plane):
+    print(v.brand)
+    print(v.model)
+    v.move()
