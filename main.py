@@ -1,47 +1,23 @@
 """
-Python Polymorphism
+Python staticmethod
 
-The word "polymorphism" means "many forms", and in programming it refers to methods/functions/operators with the same name that can be executed on many objects or classes.
-
-Function Polymorphism
-
-An example of a Python function that can be used on different objects is the len() function.
-
-Class Polymorphism
-
-Polymorphism is often used in Class methods, where we can have multiple classes with the same method name.
+In Python, @staticmethod is a decorator used to define a method inside a class that does not access or modify the class state or instance state. It behaves exactly like a regular function but lives within the class's namespace for logical grouping.
 """
 
 
-class Vehicle:
-    def __init__(self, brand, model):
-        self.brand = brand
-        self.model = model
+class MathOperations:
+    description = "A simple math utility."
 
-    def move(self):
-        print("Moving...")
+    @staticmethod
+    def add(num_one, num_two):
+        return num_one + num_two
 
-
-class Car(Vehicle):
-    pass
-
-
-class Boat(Vehicle):
-    def move(self):
-        print("Sailing...")
+    @staticmethod
+    def is_even(num):
+        return num % 2 == 0
 
 
-class Plane(Vehicle):
-    def move(self):
-        print("Flying...")
-
-
-car = Car("Ford", "Mustang")
-boat = Boat("Boat Brand", "Boat Model")
-plane = Plane("Boeing", "747")
-
-
-for v in (car, boat, plane):
-    print(v.brand)
-    print(v.model)
-    v.move()
+sum_result = MathOperations.add(5, 10)
+is_even_result = MathOperations.is_even(5)
+print(sum_result)
+print(is_even_result)
