@@ -1,23 +1,34 @@
 """
-Python staticmethod
+Python Iterators
+An iterator is an object that contains a countable number of values.
 
-In Python, @staticmethod is a decorator used to define a method inside a class that does not access or modify the class state or instance state. It behaves exactly like a regular function but lives within the class's namespace for logical grouping.
+An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.
+
+Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+
+Iterator vs Iterable
+
+Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from.
+
+All these objects have a iter() method which is used to get an iterator.
 """
 
+fruits = ["apple", "banana", "cherry"]
+fruits_iterator = iter(fruits)
 
-class MathOperations:
-    description = "A simple math utility."
+for fruit in fruits:
+    print(fruit)
 
-    @staticmethod
-    def add(num_one, num_two):
-        return num_one + num_two
+print(next(fruits_iterator))
+print(next(fruits_iterator))
+print(next(fruits_iterator))
+# print(next(fruits_iterator))
 
-    @staticmethod
-    def is_even(num):
-        return num % 2 == 0
+favorite_fruit = "apple"
+favorite_fruit_iterator = iter(favorite_fruit)
 
-
-sum_result = MathOperations.add(5, 10)
-is_even_result = MathOperations.is_even(5)
-print(sum_result)
-print(is_even_result)
+print(next(favorite_fruit_iterator))
+print(next(favorite_fruit_iterator))
+print(next(favorite_fruit_iterator))
+print(next(favorite_fruit_iterator))
+print(next(favorite_fruit_iterator))
