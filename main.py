@@ -11,24 +11,22 @@ Iterator vs Iterable
 Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from.
 
 All these objects have a iter() method which is used to get an iterator.
+
+The string "HELLO" is an iterable, but it is not an iterator.
+
+iter("HELLO") returns an iterator.
 """
 
 fruits = ["apple", "banana", "cherry"]
+
 fruits_iterator = iter(fruits)
 
-for fruit in fruits:
-    print(fruit)
-
 print(next(fruits_iterator))
 print(next(fruits_iterator))
 print(next(fruits_iterator))
-# print(next(fruits_iterator))
 
-favorite_fruit = "apple"
-favorite_fruit_iterator = iter(favorite_fruit)
 
-print(next(favorite_fruit_iterator))
-print(next(favorite_fruit_iterator))
-print(next(favorite_fruit_iterator))
-print(next(favorite_fruit_iterator))
-print(next(favorite_fruit_iterator))
+# print(fruits_iterator)
+
+# for fruit in fruits:
+#     print(fruit)
