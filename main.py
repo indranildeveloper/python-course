@@ -17,16 +17,26 @@ The string "HELLO" is an iterable, but it is not an iterator.
 iter("HELLO") returns an iterator.
 """
 
-fruits = ["apple", "banana", "cherry"]
 
-fruits_iterator = iter(fruits)
+class Counter:
+    def __init__(self, number, upper_limit):
+        self.number = number
+        self.upper_limit = upper_limit
 
-print(next(fruits_iterator))
-print(next(fruits_iterator))
-print(next(fruits_iterator))
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.number <= self.upper_limit:
+            next_number = self.number
+            self.number += 1
+            return next_number
+        else:
+            raise StopIteration
 
 
-# print(fruits_iterator)
+counter = Counter(1, 50)
+counter_iterator = iter(counter)
 
-# for fruit in fruits:
-#     print(fruit)
+for num in counter_iterator:
+    print(num)
