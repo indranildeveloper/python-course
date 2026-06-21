@@ -1,42 +1,66 @@
 """
-Python Iterators
-An iterator is an object that contains a countable number of values.
+Python Generators
 
-An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.
+Generators are iterators.
 
-Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+Generators are functions that can pause and resume their execution.
 
-Iterator vs Iterable
+When a generator function is called, it returns a generator object, which is an iterator.
 
-Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from.
+The code inside the function is not executed yet, it is only compiled. The function only executes when you iterate over the generator.
 
-All these objects have a iter() method which is used to get an iterator.
+Generators allow you to iterate over data without storing the entire dataset in memory.
 
-The string "HELLO" is an iterable, but it is not an iterator.
+Instead of using return, generators use the yield keyword.
 
-iter("HELLO") returns an iterator.
+The yield Keyword
+
+The yield keyword is what makes a function a generator.
+
+When yield is encountered, the function's state is saved, and the value is returned. The next time the generator is called, it continues from where it left off.
 """
 
-
-class Counter:
-    def __init__(self, number, upper_limit):
-        self.number = number
-        self.upper_limit = upper_limit
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.number <= self.upper_limit:
-            next_number = self.number
-            self.number += 1
-            return next_number
-        else:
-            raise StopIteration
+# def count_up_to(num):
+#     count = 1
+#     while count <= num:
+#         yield count
+#         count += 1
 
 
-counter = Counter(1, 50)
-counter_iterator = iter(counter)
+# print(count_up_to(5))
+# for num in count_up_to(5):
+#     print(num)
 
-for num in counter_iterator:
+
+# def generate_person():
+#     yield "John"
+#     yield "Jane"
+#     yield "Sara"
+
+
+# person_generator = generate_person()
+
+# print(next(person_generator))
+# print(next(person_generator))
+# print(next(person_generator))
+# print(next(person_generator))
+
+
+def large_sequence(number):
+    for num in range(number):
+        yield num
+        # print(num)
+
+
+# sequence_generator = large_sequence(1000000)
+
+# large_sequence(10000000000)
+
+for num in large_sequence(1000000):
     print(num)
+
+# print(next(sequence_generator))
+# print(next(sequence_generator))
+# print(next(sequence_generator))
+# print(next(sequence_generator))
+# print(next(sequence_generator))
