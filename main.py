@@ -1,49 +1,26 @@
 """
-Python Generators
+Python Higher Order Functions
 
-Generator Expressions
-
-Similar to list comprehensions, you can create generators using generator expressions with parentheses instead of square brackets.
+A higher-order function (HOF) in Python is a function that either accepts one or more functions as arguments or returns a function as its output.
 """
 
-# def square_numbers():
-#     for num in range(5):
-#         yield num * num
+# def greet(name):
+#     return f"Hello, {name}"
 
 
-# square_numbers_generator = square_numbers()
-
-# square_numbers_generator = (num * num for num in range(5))
-
-# print(square_numbers_generator)
-
-# for num in square_numbers_generator:
-#     print(num)
+# def formal_greeting(func, user_name):
+#     return func(user_name).upper()
 
 
-# def echo_generator():
-#     while True:
-#         received = yield
-#         print("Received: ", received)
+# print(formal_greeting(greet, "John"))
 
 
-# generator = echo_generator()
-# next(generator)
+def multiplier(factor):
+    def multiply_by(number):
+        return number * factor
 
-# generator.send("Hello")
-# generator.send("World")
-
-
-def my_generator():
-    try:
-        yield 1
-        yield 2
-        yield 3
-    finally:
-        print("Generator closed.")
+    return multiply_by
 
 
-generator = my_generator()
-print(next(generator))
-print(next(generator))
-generator.close()
+double = multiplier(2)
+print(double(10))
