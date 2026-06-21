@@ -1,26 +1,26 @@
 """
-Python Higher Order Functions
+Python Decorators
 
-A higher-order function (HOF) in Python is a function that either accepts one or more functions as arguments or returns a function as its output.
+Decorators let you add extra behavior to a function, without changing the function's code.
+
+A decorator is a function that takes another function as input and returns a new function.
 """
 
-# def greet(name):
-#     return f"Hello, {name}"
+
+def change_case(func):
+    def wrapper():
+        return func().upper()
+
+    return wrapper
 
 
-# def formal_greeting(func, user_name):
-#     return func(user_name).upper()
+@change_case
+def greet():
+    return "Hello John."
 
 
-# print(formal_greeting(greet, "John"))
+result = greet()
+print(result)
 
-
-def multiplier(factor):
-    def multiply_by(number):
-        return number * factor
-
-    return multiply_by
-
-
-double = multiplier(2)
-print(double(10))
+# changed_result = change_case(greet)
+# print(changed_result())
