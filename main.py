@@ -1,14 +1,16 @@
 """
 Python Decorators
 
-Decorators let you add extra behavior to a function, without changing the function's code.
-
-A decorator is a function that takes another function as input and returns a new function.
+Preserving Function Metadata
 """
+
+from functools import wraps
 
 
 def change_case(func):
+    @wraps(func)
     def wrapper(*args, **kwargs):
+        """This is the wrapper function inside the decorator."""
         return func(*args, **kwargs).upper()
 
     return wrapper
@@ -16,6 +18,7 @@ def change_case(func):
 
 @change_case
 def greet(name):
+    """A simple function to greet John."""
     return f"Hello {name}."
 
 
@@ -24,8 +27,13 @@ def greet_full_name(first_name, last_name):
     return f"Hello, {first_name} {last_name}."
 
 
-result = greet("John")
-result_full_name = greet_full_name("Jane", "Doe")
+print(greet.__name__)
+print(greet.__doc__)
 
-print(result)
-print(result_full_name)
+# def my_function():
+#     """A simple function that returns Hello World."""
+#     return "Hello World."
+
+
+# print(my_function.__name__)
+# print(my_function.__doc__)
