@@ -8,19 +8,24 @@ A decorator is a function that takes another function as input and returns a new
 
 
 def change_case(func):
-    def wrapper():
-        return func().upper()
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs).upper()
 
     return wrapper
 
 
 @change_case
-def greet():
-    return "Hello John."
+def greet(name):
+    return f"Hello {name}."
 
 
-result = greet()
+@change_case
+def greet_full_name(first_name, last_name):
+    return f"Hello, {first_name} {last_name}."
+
+
+result = greet("John")
+result_full_name = greet_full_name("Jane", "Doe")
+
 print(result)
-
-# changed_result = change_case(greet)
-# print(changed_result())
+print(result_full_name)
