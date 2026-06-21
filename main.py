@@ -1,22 +1,31 @@
 """
 Python Decorators
 
-Preserving Function Metadata
+Decorator With Arguments
+
+Decorators can accept their own arguments by adding another wrapper level.
 """
 
 from functools import wraps
 
 
-def change_case(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        """This is the wrapper function inside the decorator."""
-        return func(*args, **kwargs).upper()
+def change_case(num):
+    def inner_func(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            """This is the wrapper function inside the decorator."""
+            if num == 1:
+                result = func(*args, **kwargs).upper()
+            else:
+                result = func(*args, **kwargs).lower()
+            return result
 
-    return wrapper
+        return wrapper
+
+    return inner_func
 
 
-@change_case
+@change_case(2)
 def greet(name):
     """A simple function to greet John."""
     return f"Hello {name}."
@@ -27,13 +36,5 @@ def greet_full_name(first_name, last_name):
     return f"Hello, {first_name} {last_name}."
 
 
-print(greet.__name__)
-print(greet.__doc__)
-
-# def my_function():
-#     """A simple function that returns Hello World."""
-#     return "Hello World."
-
-
-# print(my_function.__name__)
-# print(my_function.__doc__)
+result = greet("John")
+print(result)
