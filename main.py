@@ -1,36 +1,16 @@
 """
-Python File Open
+Python File Write
 
-File Handling
+Write to an Existing File
 
-The key function for working with files in Python is the open() function.
-The open() function takes two parameters; filename, and mode.
+To write to an existing file, you must add a parameter to the open() function:
 
-There are four different methods (modes) for opening a file:
-
-- "r" - Read - Default value. Opens a file for reading, error if the file does not exist
-- "a" - Append - Opens a file for appending, creates the file if it does not exist
-- "w" - Write - Opens a file for writing, creates the file if it does not exist
-- "x" - Create - Creates the specified file, returns an error if the file exists
-
-In addition you can specify if the file should be handled as binary or text mode
-
-- "t" - Text - Default value. Text mode
-- "b" - Binary - Binary mode (e.g. images)
+- "a" - Append - will append to the end of the file
+- "w" - Write - will overwrite any existing content
 """
 
-text_file = open("story.txt", "rt")
-# print(text_file)
-
-print(text_file.closed)
-
-text_file.close()
-
-print(text_file.closed)
-
-text_contents = text_file.read()
-text_file.seek(0)
-another_text_contents = text_file.readlines()
-
-print(text_contents)
-print(another_text_contents)
+with open("demo.txt", "a") as text_file:
+    # text_file.write("Hello World.\n")
+    # text_file.write("Hello World again.\n")
+    # text_file.write("This is a new line.\n")
+    text_file.write("Hi there.")
