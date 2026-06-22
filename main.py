@@ -1,40 +1,29 @@
 """
-Python Decorators
+Python File Open
 
-Decorator With Arguments
+File Handling
 
-Decorators can accept their own arguments by adding another wrapper level.
+The key function for working with files in Python is the open() function.
+The open() function takes two parameters; filename, and mode.
+
+There are four different methods (modes) for opening a file:
+
+- "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+- "a" - Append - Opens a file for appending, creates the file if it does not exist
+- "w" - Write - Opens a file for writing, creates the file if it does not exist
+- "x" - Create - Creates the specified file, returns an error if the file exists
+
+In addition you can specify if the file should be handled as binary or text mode
+
+- "t" - Text - Default value. Text mode
+- "b" - Binary - Binary mode (e.g. images)
 """
 
-from functools import wraps
+text_file = open("story.txt", "rt")
+# print(text_file)
 
+text_contents = text_file.read()
+another_text_contents = text_file.read()
 
-def change_case(num):
-    def inner_func(func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            """This is the wrapper function inside the decorator."""
-            if num == 1:
-                result = func(*args, **kwargs).upper()
-            else:
-                result = func(*args, **kwargs).lower()
-            return result
-
-        return wrapper
-
-    return inner_func
-
-
-@change_case(2)
-def greet(name):
-    """A simple function to greet John."""
-    return f"Hello {name}."
-
-
-@change_case
-def greet_full_name(first_name, last_name):
-    return f"Hello, {first_name} {last_name}."
-
-
-result = greet("John")
-print(result)
+print(text_contents)
+print(another_text_contents)
