@@ -22,8 +22,15 @@ In addition you can specify if the file should be handled as binary or text mode
 text_file = open("story.txt", "rt")
 # print(text_file)
 
+print(text_file.closed)
+
+text_file.close()
+
+print(text_file.closed)
+
 text_contents = text_file.read()
-another_text_contents = text_file.read()
+text_file.seek(0)
+another_text_contents = text_file.readlines()
 
 print(text_contents)
 print(another_text_contents)
